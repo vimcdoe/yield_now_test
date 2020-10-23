@@ -1,0 +1,29 @@
+[package]
+name = "rtest"
+version = "0.1.0"
+authors = ["vimcode <57341934+vimcdoe@users.noreply.github.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "0.3", features = ["full"] }
+smol = "1.2.4"
+async-std= { version = "1.6", features = ["attributes"] }
+
+
+[[example]]
+name = "smol"
+path = "examples/smol.rs"
+
+[[example]]
+name = "tokio"
+path = "examples/tokio.rs"
+
+[[example]]
+name = "async_std"
+path = "examples/async_std.rs"
+
+[[example]]
+name = "thread"
+path = "examples/thread.rs"
